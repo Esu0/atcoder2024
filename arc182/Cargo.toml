@@ -1,44 +1,39 @@
 [package]
-name = "abc365"
+name = "arc182"
 version = "0.1.0"
 edition = "2021"
 
 [package.metadata.cargo-compete.bin]
-abc365-a = { alias = "a", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_a" }
-abc365-b = { alias = "b", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_b" }
-abc365-c = { alias = "c", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_c" }
-abc365-d = { alias = "d", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_d" }
-abc365-e = { alias = "e", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_e" }
-abc365-f = { alias = "f", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_f" }
-abc365-g = { alias = "g", problem = "https://atcoder.jp/contests/abc365/tasks/abc365_g" }
+arc182-a = { alias = "a", problem = "https://atcoder.jp/contests/arc182/tasks/arc182_a" }
+arc182-b = { alias = "b", problem = "https://atcoder.jp/contests/arc182/tasks/arc182_b" }
+arc182-c = { alias = "c", problem = "https://atcoder.jp/contests/arc182/tasks/arc182_c" }
+arc182-d = { alias = "d", problem = "https://atcoder.jp/contests/arc182/tasks/arc182_d" }
+arc182-e = { alias = "e", problem = "https://atcoder.jp/contests/arc182/tasks/arc182_e" }
+arc182-f = { alias = "f", problem = "https://atcoder.jp/contests/arc182/tasks/arc182_f" }
 
 [[bin]]
-name = "abc365-a"
+name = "arc182-a"
 path = "src/bin/a.rs"
 
 [[bin]]
-name = "abc365-b"
+name = "arc182-b"
 path = "src/bin/b.rs"
 
 [[bin]]
-name = "abc365-c"
+name = "arc182-c"
 path = "src/bin/c.rs"
 
 [[bin]]
-name = "abc365-d"
+name = "arc182-d"
 path = "src/bin/d.rs"
 
 [[bin]]
-name = "abc365-e"
+name = "arc182-e"
 path = "src/bin/e.rs"
 
 [[bin]]
-name = "abc365-f"
+name = "arc182-f"
 path = "src/bin/f.rs"
-
-[[bin]]
-name = "abc365-g"
-path = "src/bin/g.rs"
 
 [dependencies]
 # ac-library-rs = "=0.1.1"
@@ -103,6 +98,5 @@ path = "src/bin/g.rs"
 # rustc-hash = "=1.1.0"
 # smallvec = { version = "=1.11.0", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
 proconio = { version = "=0.4.5", features = ["derive"] }
-segtree = { git = "https://github.com/Esu0/mylib-rust" }
 
 [dev-dependencies]
