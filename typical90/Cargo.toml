@@ -520,5 +520,6 @@ path = "src/bin/090.rs"
 proconio = { version = "=0.4.5", features = ["derive"] }
 util = { git = "https://github.com/Esu0/mylib-rust" }
 segtree = { git = "https://github.com/Esu0/mylib-rust" }
+union-find = { git = "https://github.com/Esu0/mylib-rust" }
 
 [dev-dependencies]

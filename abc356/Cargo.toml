@@ -103,5 +103,6 @@ path = "src/bin/g.rs"
 # rustc-hash = "=1.1.0"
 # smallvec = { version = "=1.11.0", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
 proconio = { version = "=0.4.5", features = ["derive"] }
+util = { git = "https://github.com/Esu0/mylib-rust.git" }
 
 [dev-dependencies]

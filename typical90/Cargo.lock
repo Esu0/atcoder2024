@@ -43,7 +43,7 @@ dependencies = [
 [[package]]
 name = "segtree"
 version = "0.1.0"
-source = "git+https://github.com/Esu0/mylib-rust#98219875985f36b610f19a5dd1e1273e321f530a"
+source = "git+https://github.com/Esu0/mylib-rust#6de0902c13d88aeaa67a5f83913c4c60ed84a749"
 
 [[package]]
 name = "syn"
@@ -62,6 +62,7 @@ version = "0.1.0"
 dependencies = [
  "proconio",
  "segtree",
+ "union-find",
  "util",
 ]
 
@@ -72,6 +73,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "826e7639553986605ec5979c7dd957c7895e93eabed50ab2ffa7f6128a75097c"
 
 [[package]]
+name = "union-find"
+version = "0.1.0"
+source = "git+https://github.com/Esu0/mylib-rust#6de0902c13d88aeaa67a5f83913c4c60ed84a749"
+
+[[package]]
 name = "util"
 version = "0.1.0"
-source = "git+https://github.com/Esu0/mylib-rust#98219875985f36b610f19a5dd1e1273e321f530a"
+source = "git+https://github.com/Esu0/mylib-rust#6de0902c13d88aeaa67a5f83913c4c60ed84a749"
