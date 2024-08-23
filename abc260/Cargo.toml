@@ -1,48 +1,48 @@
 [package]
-name = "abc308"
+name = "abc260"
 version = "0.1.0"
 edition = "2021"
 
 [package.metadata.cargo-compete.bin]
-abc308-a = { alias = "a", problem = "https://atcoder.jp/contests/abc308/tasks/abc308_a" }
-abc308-b = { alias = "b", problem = "https://atcoder.jp/contests/abc308/tasks/abc308_b" }
-abc308-c = { alias = "c", problem = "https://atcoder.jp/contests/abc308/tasks/abc308_c" }
-abc308-d = { alias = "d", problem = "https://atcoder.jp/contests/abc308/tasks/abc308_d" }
-abc308-e = { alias = "e", problem = "https://atcoder.jp/contests/abc308/tasks/abc308_e" }
-abc308-ex = { alias = "ex", problem = "https://atcoder.jp/contests/abc308/tasks/abc308_h" }
-abc308-f = { alias = "f", problem = "https://atcoder.jp/contests/abc308/tasks/abc308_f" }
-abc308-g = { alias = "g", problem = "https://atcoder.jp/contests/abc308/tasks/abc308_g" }
+abc260-a = { alias = "a", problem = "https://atcoder.jp/contests/abc260/tasks/abc260_a" }
+abc260-b = { alias = "b", problem = "https://atcoder.jp/contests/abc260/tasks/abc260_b" }
+abc260-c = { alias = "c", problem = "https://atcoder.jp/contests/abc260/tasks/abc260_c" }
+abc260-d = { alias = "d", problem = "https://atcoder.jp/contests/abc260/tasks/abc260_d" }
+abc260-e = { alias = "e", problem = "https://atcoder.jp/contests/abc260/tasks/abc260_e" }
+abc260-ex = { alias = "ex", problem = "https://atcoder.jp/contests/abc260/tasks/abc260_h" }
+abc260-f = { alias = "f", problem = "https://atcoder.jp/contests/abc260/tasks/abc260_f" }
+abc260-g = { alias = "g", problem = "https://atcoder.jp/contests/abc260/tasks/abc260_g" }
 
 [[bin]]
-name = "abc308-a"
+name = "abc260-a"
 path = "src/bin/a.rs"
 
 [[bin]]
-name = "abc308-b"
+name = "abc260-b"
 path = "src/bin/b.rs"
 
 [[bin]]
-name = "abc308-c"
+name = "abc260-c"
 path = "src/bin/c.rs"
 
 [[bin]]
-name = "abc308-d"
+name = "abc260-d"
 path = "src/bin/d.rs"
 
 [[bin]]
-name = "abc308-e"
+name = "abc260-e"
 path = "src/bin/e.rs"
 
 [[bin]]
-name = "abc308-ex"
+name = "abc260-ex"
 path = "src/bin/ex.rs"
 
 [[bin]]
-name = "abc308-f"
+name = "abc260-f"
 path = "src/bin/f.rs"
 
 [[bin]]
-name = "abc308-g"
+name = "abc260-g"
 path = "src/bin/g.rs"
 
 [dependencies]
@@ -104,7 +104,9 @@ path = "src/bin/g.rs"
 # im-rc = "=15.1.0"
 # fixedbitset = "=0.4.2"
 # bitset-fixed = "=0.1.0"
+# text_io = "=0.1.12"
+# rustc-hash = "=1.1.0"
+# smallvec = { version = "=1.11.0", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
 proconio = { version = "=0.4.5", features = ["derive"] }
-segtree = { git = "https://github.com/Esu0/mylib-rust.git" }
 
 [dev-dependencies]
