@@ -1,6 +1,8 @@
 use proconio::input;
+use util::ModInt;
 
-const MODULO: u64 = 1_000_000_007;
+const MODULO: u32 = 1_000_000_007;
+type MInt = ModInt<MODULO>;
 
 fn main() {
     input! {
@@ -8,41 +10,58 @@ fn main() {
         a: [i8; n],
     }
 
-    let m = n * 20 + 1;
-    let offset = n * 10;
-    // dp[i][j + offset]: i番目までを考えたときに累積和がjになる部分列を選んだ時のAの変化後の数列の数
-    let mut dp = vec![vec![0u64; m]; n + 1];
-    // dp2[i][j + offset]: i番目までを考えたときに累積和がjかつ末尾がjとなる部分列を選んだ時のAの変化後の数列の数
-    let mut dp2 = vec![vec![0u64; m]; n + 1];
-    dp[0][offset] = 1;
-    for (i, &ai) in a.iter().enumerate() {
-        for j in 0..m {
-            dp[i + 1][j] += dp[i][j];
-            dp[i + 1][j] %= MODULO;
-            dp2[i + 1][j] = dp2[i][j];
-            // dp2[i + 1][j] %= MODULO;
-            let k = (j as isize + a[i] as isize) as usize;
-            if ai != 0 && k < m {
-                if j == offset {
-                    dp[i + 1][k] += dp[i][j] + MODULO - dp2[i][k];
-                } else {
-                    dp[i + 1][k] += dp[i][j];
+    // dp[i][j]: i番目の要素までの数列に対して、総和がA[i] + jとなる部分列で、A[i]を含むものを累積和で置き換えた後としてあり得る数列の個数
+    let a_max = a.iter().map(|&x| x.abs()).max().unwrap() as usize;
+    let offset1 = a_max * n;
+    let mut dp = vec![vec![MInt::new(0); 2 * offset1 + 1]; n];
+    let mut set = [false; 21];
+    let set = &mut set[..a_max * 2 + 1];
+    let offset2 = a_max as i8;
+    for i in 1..n {
+        if a[i - 1] != 0 {
+            set[(a[i - 1] + offset2) as usize] = true;
+        }
+        for j in set.iter().enumerate().filter(|(_, &b)| b).map(|(j, _)| j) {
+            let j = ((j as i8 - offset2) as isize + offset1 as isize) as usize;
+            dp[i][j] = MInt::new(1);
+        }
+    }
+
+    let u = a_max as i32 * n as i32;
+    let to_val = |i: usize| i as i32 - offset1 as i32;
+    let to_ind = |v: i32| (v + offset1 as i32) as usize;
+    for i in 0..n - 1 {
+        for j in 0..2 * offset1 + 1 {
+            let v = to_val(j) + a[i] as i32;
+            if !(-u <= v && v <= u) {
+                continue;
+            }
+            if v != 0 {
+                let l = to_ind(v);
+                for k in i + 1..n {
+                    let a = dp[i][j];
+                    dp[k][l] += a;
                 }
-                dp[i + 1][k] %= MODULO;
-                // println!("{} {} {}", i + 1, k, dp[i + 1][k]);
+            } else {
+                set.fill(false);
+                for k in i + 2..n {
+                    if a[k - 1] != 0 {
+                        set[(a[k - 1] + offset2) as usize] = true;
+                    }
+                    for l in set.iter().enumerate().filter(|(_, &b)| b).map(|(l, _)| l) {
+                        let l = ((l as i8 - offset2) as isize + offset1 as isize) as usize;
+                        let a = dp[i][j];
+                        dp[k][l] += a;
+                    }
+                }
             }
         }
-        if ai != 0 {
-            dp2[i + 1][(ai as isize + offset as isize) as usize] = dp[i][offset];
-        }
     }
-    for row in &dp {
-        eprintln!("{:?}", row[offset]);
-    }
-    // for row in &dp2 {
-    //     eprintln!("{:?}", &row[offset - 1..]);
-    // }
-    eprintln!("{:?}", &dp2[n][offset - 1..offset + 2]);
-    let ans = (dp[n].iter().sum::<u64>() % MODULO + MODULO - dp2[n].iter().sum::<u64>() % MODULO) % MODULO;
-    println!("{ans}");
+    // dp.iter().for_each(|x| eprintln!("{:?}", x));
+    // eprintln!("{:?}", dp);
+    let ans = dp
+        .iter()
+        .flat_map(|x| x[..offset1].iter().chain(&x[offset1 + 1..]))
+        .fold(MInt::new(0), |acc, &x| acc + x);
+    println!("{}", ans + MInt::new(1));
 }
