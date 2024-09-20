@@ -3,11 +3,10 @@
 version = 3
 
 [[package]]
-name = "abc368"
+name = "abc371"
 version = "0.1.0"
 dependencies = [
  "proconio",
- "segtree",
 ]
 
 [[package]]
@@ -47,11 +46,6 @@ checksum = "2bdc6c187c65bca4260c9011c9e3132efe4909da44726bad24cf7572ae338d7f"
 dependencies = [
  "proc-macro2",
 ]
-
-[[package]]
-name = "segtree"
-version = "0.1.0"
-source = "git+https://github.com/Esu0/mylib-rust.git#25e79bb26906e98bce5f396569b938e2dc9fa723"
 
 [[package]]
 name = "syn"

@@ -1,43 +1,43 @@
 [package]
-name = "abc368"
+name = "abc370"
 version = "0.1.0"
 edition = "2021"
 
 [package.metadata.cargo-compete.bin]
-abc368-a = { alias = "a", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_a" }
-abc368-b = { alias = "b", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_b" }
-abc368-c = { alias = "c", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_c" }
-abc368-d = { alias = "d", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_d" }
-abc368-e = { alias = "e", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_e" }
-abc368-f = { alias = "f", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_f" }
-abc368-g = { alias = "g", problem = "https://atcoder.jp/contests/abc368/tasks/abc368_g" }
+abc370-a = { alias = "a", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_a" }
+abc370-b = { alias = "b", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_b" }
+abc370-c = { alias = "c", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_c" }
+abc370-d = { alias = "d", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_d" }
+abc370-e = { alias = "e", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_e" }
+abc370-f = { alias = "f", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_f" }
+abc370-g = { alias = "g", problem = "https://atcoder.jp/contests/abc370/tasks/abc370_g" }
 
 [[bin]]
-name = "abc368-a"
+name = "abc370-a"
 path = "src/bin/a.rs"
 
 [[bin]]
-name = "abc368-b"
+name = "abc370-b"
 path = "src/bin/b.rs"
 
 [[bin]]
-name = "abc368-c"
+name = "abc370-c"
 path = "src/bin/c.rs"
 
 [[bin]]
-name = "abc368-d"
+name = "abc370-d"
 path = "src/bin/d.rs"
 
 [[bin]]
-name = "abc368-e"
+name = "abc370-e"
 path = "src/bin/e.rs"
 
 [[bin]]
-name = "abc368-f"
+name = "abc370-f"
 path = "src/bin/f.rs"
 
 [[bin]]
-name = "abc368-g"
+name = "abc370-g"
 path = "src/bin/g.rs"
 
 [dependencies]
@@ -102,7 +102,7 @@ path = "src/bin/g.rs"
 # text_io = "=0.1.12"
 # rustc-hash = "=1.1.0"
 # smallvec = { version = "=1.11.0", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
-segtree = { git = "https://github.com/Esu0/mylib-rust.git" }
+util = { git = "https://github.com/Esu0/mylib-rust.git" }
 proconio = { version = "=0.4.5", features = ["derive"] }
 
 [dev-dependencies]
