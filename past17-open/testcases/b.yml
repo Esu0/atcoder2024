@@ -1,0 +1,36 @@
+---
+type: Batch
+timelimit: 2s
+match: Lines
+
+cases:
+  - name: sample1
+    in: |
+      3
+      Perfect
+      Great
+      Perfect
+    out: |
+      Full Combo
+  - name: sample2
+    in: |
+      1
+      Perfect
+    out: |
+      All Perfect
+  - name: sample3
+    in: |
+      5
+      Bad
+      Miss
+      Perfect
+      Great
+      Good
+    out: |
+      Failed
+
+extend:
+  - type: Text
+    path: "./b"
+    in: /in/*.txt
+    out: /out/*.txt
