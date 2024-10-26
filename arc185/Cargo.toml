@@ -1,44 +1,34 @@
 [package]
-name = "abc355"
+name = "arc185"
 version = "0.1.0"
 edition = "2021"
 
 [package.metadata.cargo-compete.bin]
-abc355-a = { alias = "a", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_a" }
-abc355-b = { alias = "b", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_b" }
-abc355-c = { alias = "c", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_c" }
-abc355-d = { alias = "d", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_d" }
-abc355-e = { alias = "e", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_e" }
-abc355-f = { alias = "f", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_f" }
-abc355-g = { alias = "g", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_g" }
+arc185-a = { alias = "a", problem = "https://atcoder.jp/contests/arc185/tasks/arc185_a" }
+arc185-b = { alias = "b", problem = "https://atcoder.jp/contests/arc185/tasks/arc185_b" }
+arc185-c = { alias = "c", problem = "https://atcoder.jp/contests/arc185/tasks/arc185_c" }
+arc185-d = { alias = "d", problem = "https://atcoder.jp/contests/arc185/tasks/arc185_d" }
+arc185-e = { alias = "e", problem = "https://atcoder.jp/contests/arc185/tasks/arc185_e" }
 
 [[bin]]
-name = "abc355-a"
+name = "arc185-a"
 path = "src/bin/a.rs"
 
 [[bin]]
-name = "abc355-b"
+name = "arc185-b"
 path = "src/bin/b.rs"
 
 [[bin]]
-name = "abc355-c"
+name = "arc185-c"
 path = "src/bin/c.rs"
 
 [[bin]]
-name = "abc355-d"
+name = "arc185-d"
 path = "src/bin/d.rs"
 
 [[bin]]
-name = "abc355-e"
+name = "arc185-e"
 path = "src/bin/e.rs"
-
-[[bin]]
-name = "abc355-f"
-path = "src/bin/f.rs"
-
-[[bin]]
-name = "abc355-g"
-path = "src/bin/g.rs"
 
 [dependencies]
 # ac-library-rs = "=0.1.1"
@@ -102,7 +92,7 @@ path = "src/bin/g.rs"
 # text_io = "=0.1.12"
 # rustc-hash = "=1.1.0"
 # smallvec = { version = "=1.11.0", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
+util = { git = "https://github.com/Esu0/mylib-rust.git" }
 proconio = { version = "=0.4.5", features = ["derive"] }
-union-find = { git = "https://github.com/Esu0/mylib-rust.git" }
 
 [dev-dependencies]

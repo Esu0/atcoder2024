@@ -1,43 +1,48 @@
 [package]
-name = "abc355"
+name = "abc280"
 version = "0.1.0"
 edition = "2021"
 
 [package.metadata.cargo-compete.bin]
-abc355-a = { alias = "a", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_a" }
-abc355-b = { alias = "b", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_b" }
-abc355-c = { alias = "c", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_c" }
-abc355-d = { alias = "d", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_d" }
-abc355-e = { alias = "e", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_e" }
-abc355-f = { alias = "f", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_f" }
-abc355-g = { alias = "g", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_g" }
+abc280-a = { alias = "a", problem = "https://atcoder.jp/contests/abc280/tasks/abc280_a" }
+abc280-b = { alias = "b", problem = "https://atcoder.jp/contests/abc280/tasks/abc280_b" }
+abc280-c = { alias = "c", problem = "https://atcoder.jp/contests/abc280/tasks/abc280_c" }
+abc280-d = { alias = "d", problem = "https://atcoder.jp/contests/abc280/tasks/abc280_d" }
+abc280-e = { alias = "e", problem = "https://atcoder.jp/contests/abc280/tasks/abc280_e" }
+abc280-ex = { alias = "ex", problem = "https://atcoder.jp/contests/abc280/tasks/abc280_h" }
+abc280-f = { alias = "f", problem = "https://atcoder.jp/contests/abc280/tasks/abc280_f" }
+abc280-g = { alias = "g", problem = "https://atcoder.jp/contests/abc280/tasks/abc280_g" }
 
 [[bin]]
-name = "abc355-a"
+name = "abc280-a"
 path = "src/bin/a.rs"
 
 [[bin]]
-name = "abc355-b"
+name = "abc280-b"
 path = "src/bin/b.rs"
 
 [[bin]]
-name = "abc355-c"
+name = "abc280-c"
 path = "src/bin/c.rs"
 
 [[bin]]
-name = "abc355-d"
+name = "abc280-d"
 path = "src/bin/d.rs"
 
 [[bin]]
-name = "abc355-e"
+name = "abc280-e"
 path = "src/bin/e.rs"
 
 [[bin]]
-name = "abc355-f"
+name = "abc280-ex"
+path = "src/bin/ex.rs"
+
+[[bin]]
+name = "abc280-f"
 path = "src/bin/f.rs"
 
 [[bin]]
-name = "abc355-g"
+name = "abc280-g"
 path = "src/bin/g.rs"
 
 [dependencies]
@@ -102,7 +107,7 @@ path = "src/bin/g.rs"
 # text_io = "=0.1.12"
 # rustc-hash = "=1.1.0"
 # smallvec = { version = "=1.11.0", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
+# util = { git = "https://github.com/Esu0/mylib-rust.git" }
 proconio = { version = "=0.4.5", features = ["derive"] }
-union-find = { git = "https://github.com/Esu0/mylib-rust.git" }
 
 [dev-dependencies]

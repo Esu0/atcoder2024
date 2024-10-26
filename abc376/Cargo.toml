@@ -1,43 +1,43 @@
 [package]
-name = "abc355"
+name = "abc376"
 version = "0.1.0"
 edition = "2021"
 
 [package.metadata.cargo-compete.bin]
-abc355-a = { alias = "a", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_a" }
-abc355-b = { alias = "b", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_b" }
-abc355-c = { alias = "c", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_c" }
-abc355-d = { alias = "d", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_d" }
-abc355-e = { alias = "e", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_e" }
-abc355-f = { alias = "f", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_f" }
-abc355-g = { alias = "g", problem = "https://atcoder.jp/contests/abc355/tasks/abc355_g" }
+abc376-a = { alias = "a", problem = "https://atcoder.jp/contests/abc376/tasks/abc376_a" }
+abc376-b = { alias = "b", problem = "https://atcoder.jp/contests/abc376/tasks/abc376_b" }
+abc376-c = { alias = "c", problem = "https://atcoder.jp/contests/abc376/tasks/abc376_c" }
+abc376-d = { alias = "d", problem = "https://atcoder.jp/contests/abc376/tasks/abc376_d" }
+abc376-e = { alias = "e", problem = "https://atcoder.jp/contests/abc376/tasks/abc376_e" }
+abc376-f = { alias = "f", problem = "https://atcoder.jp/contests/abc376/tasks/abc376_f" }
+abc376-g = { alias = "g", problem = "https://atcoder.jp/contests/abc376/tasks/abc376_g" }
 
 [[bin]]
-name = "abc355-a"
+name = "abc376-a"
 path = "src/bin/a.rs"
 
 [[bin]]
-name = "abc355-b"
+name = "abc376-b"
 path = "src/bin/b.rs"
 
 [[bin]]
-name = "abc355-c"
+name = "abc376-c"
 path = "src/bin/c.rs"
 
 [[bin]]
-name = "abc355-d"
+name = "abc376-d"
 path = "src/bin/d.rs"
 
 [[bin]]
-name = "abc355-e"
+name = "abc376-e"
 path = "src/bin/e.rs"
 
 [[bin]]
-name = "abc355-f"
+name = "abc376-f"
 path = "src/bin/f.rs"
 
 [[bin]]
-name = "abc355-g"
+name = "abc376-g"
 path = "src/bin/g.rs"
 
 [dependencies]
@@ -102,7 +102,7 @@ path = "src/bin/g.rs"
 # text_io = "=0.1.12"
 # rustc-hash = "=1.1.0"
 # smallvec = { version = "=1.11.0", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
+# util = { git = "https://github.com/Esu0/mylib-rust.git" }
 proconio = { version = "=0.4.5", features = ["derive"] }
-union-find = { git = "https://github.com/Esu0/mylib-rust.git" }
 
 [dev-dependencies]
