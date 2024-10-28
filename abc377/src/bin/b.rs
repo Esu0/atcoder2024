@@ -15,6 +15,9 @@ fn main() {
             }
         }
     }
-    let ans = t.iter().map(|row| row.iter().filter(|&&x| x).count()).sum::<usize>();
+    let ans = t
+        .iter()
+        .map(|row| row.iter().filter(|&&x| x).count())
+        .sum::<usize>();
     println!("{}", ans);
 }
